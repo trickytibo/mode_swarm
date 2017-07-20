@@ -28,7 +28,7 @@ Sur Node :
 
 *$ docker swarm join --token <token given by previous command>*
 
-Deploiement de le httpd avec docker-compose :
+Deploiement de httpd avec docker-compose :
 -
 
 *$ docker-compose -f docker-compose.MY_WEBSITE.yml up -d*
