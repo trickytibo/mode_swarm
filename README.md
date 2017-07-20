@@ -15,7 +15,7 @@ Docker-compose (ici version 1.14.0-rc1
 
 Upgrade de Python (pour centos/redhat)
 
-*$ yum upgrade python**
+*$ yum upgrade python\**
 
 Configuration du cluster (les ports TCP:2377, UDP:TCP:7946, UDP:4789 doivent être ouverts) 
 -
@@ -26,9 +26,9 @@ Sur Master :
 
 Sur Node :
 
-*$ docker swarm join --token <token given by previous command>*
+*$ docker swarm join --token \<token given by previous command\>*
 
-Deploiement de httpd avec docker-compose :
+Deploiement de httpd avec docker-compose
 -
 
 *$ docker-compose -f docker-compose.MY_WEBSITE.yml up -d*
