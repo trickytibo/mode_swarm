@@ -1,0 +1,25 @@
+*** Settings ***
+Resource          ../Conf/Conf_navig_web.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!Acces site
+    Open Browser    ${url}    ${browser}
+    Set Window Size    400    700
+
+!Navigation
+    Wait Until Element Is Visible    mobile-navigation
+    Click Element    id=mobile-navigation
+    Click Element    xpath=//a[@href='about.html']
+    Wait Until Page Contains    Our website templates are created with inspiration
+    Wait Until Element Is Visible    mobile-navigation
+    Click Element    id=mobile-navigation
+    Click Element    xpath=//a[@href='contact.html']
+    Wait Until Page Contains    DO NOT HESITATE TO CONTACT US
+
+!Informations contact
+    Input Text    Name    ${name}
+    Input Text    Email Address    ${mail}
+    Input Text    Subject    ${subject}
+    Input Text    message    ${text}
+    Capture Page Screenshot    result.png

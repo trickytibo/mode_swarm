@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          Function/function_navig_web.txt
+Library           Selenium2Library
+
+*** Test Cases ***
+Navig Docker2
+    Connexion
+    Navigation

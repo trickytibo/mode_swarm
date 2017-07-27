@@ -1,34 +1,28 @@
 version: "3"
+
+#networks:
+#  my_network:
+#    driver: overlay
+
 services:
   my_website:
     image: httpd:2.4
-    deploy:
-      replicas: 2
-#      ressources:
-#        limites:
-#          cpus: "0.2"
-#          memory: 100M
-      restart_policy: 
-        condition: on-failure             
+    volumes:
+      - ./www:/usr/local/apache2/htdocs/
+  #    deploy:
+  #      replicas: 2
+  #      ressources:
+  #        limites:
+  #          cpus: "0.2"
+  #          memory: 100M
+  #    restart_policy: 
+  #      condition: on-failure             
     ports:
       - "8000:80"
-#    expose: 
-#      - "8080"
     logging:
-      driver: journald
+      driver: "journald"
 #      options:
 #        gelf-address: "tcp://127.0.0.1:5000"
 #        tag: "Logger-test"
-    volumes:
-      - ./www:/usr/local/apache2/htdocs/ 
-    networks:
-      - my_network
-        
-networks:
-  my_network:
-    driver: overlay
-#    ipam:
-#      config:
-#        subnet: 172.28.0.0/16
-#        ip_range: 172.28.5.0/24
-#        gateway: 172.28.5.254
+#    networks:
+#      - my_network

@@ -1,0 +1,10 @@
+*** Settings ***
+Resource          ../PageObject/pageobject_navig_web.txt
+
+*** Keywords ***
+Connexion
+    !Acces site
+
+Navigation
+    !Navigation
+    !Informations contact

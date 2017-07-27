@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rf:
+    image: ppodgorsek/robot-framework:3.0.5
+    logging:
+      driver: journald
+    environment:
+      - BROWSER:chrome
+    volumes:
+      - ./res_robot:/opt/robotframework/reports
+      - ./check_web.robot:/opt/robotframework/tests

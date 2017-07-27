@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170727 14:17:47.170" generator="Robot 3.0.2 (Python 2.7.13 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/Suite_web_Docker" id="s1-s1" name="Suite web Docker">
+<suite source="/opt/robotframework/tests/Suite_web_Docker/Test_web_Docker2.txt" id="s1-s1-s1" name="Test web Docker2">
+<test id="s1-s1-s1-t1" name="Navig Docker2">
+<kw name="Connexion" library="function_navig_web">
+<kw name="!Acces site" library="pageobject_navig_web">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170727 14:17:47.299" level="INFO">Opening browser 'chrome' to base url 'http://84.39.33.161:8000'</msg>
+<status status="PASS" endtime="20170727 14:17:50.588" starttime="20170727 14:17:47.298"></status>
+</kw>
+<kw name="Set Window Size" library="Selenium2Library">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>700</arg>
+</arguments>
+<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:50.588"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:47.298"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:47.298"></status>
+</kw>
+<kw name="Navigation" library="function_navig_web">
+<kw name="!Navigation" library="pageobject_navig_web">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>mobile-navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170727 14:17:50.794" starttime="20170727 14:17:50.751"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=mobile-navigation</arg>
+</arguments>
+<msg timestamp="20170727 14:17:50.794" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
+<status status="PASS" endtime="20170727 14:17:50.866" starttime="20170727 14:17:50.794"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[@href='about.html']</arg>
+</arguments>
+<msg timestamp="20170727 14:17:50.866" level="INFO">Clicking element 'xpath=//a[@href='about.html']'.</msg>
+<status status="PASS" endtime="20170727 14:17:50.992" starttime="20170727 14:17:50.866"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Our website templates are created with inspiration</arg>
+</arguments>
+<status status="PASS" endtime="20170727 14:17:51.017" starttime="20170727 14:17:50.992"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>mobile-navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170727 14:17:51.047" starttime="20170727 14:17:51.017"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=mobile-navigation</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.047" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
+<status status="PASS" endtime="20170727 14:17:51.112" starttime="20170727 14:17:51.047"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[@href='contact.html']</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.113" level="INFO">Clicking element 'xpath=//a[@href='contact.html']'.</msg>
+<status status="PASS" endtime="20170727 14:17:51.241" starttime="20170727 14:17:51.112"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>DO NOT HESITATE TO CONTACT US</arg>
+</arguments>
+<status status="PASS" endtime="20170727 14:17:51.269" starttime="20170727 14:17:51.241"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:51.270" starttime="20170727 14:17:50.751"></status>
+</kw>
+<kw name="!Informations contact" library="pageobject_navig_web">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>Name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.271" level="INFO">Typing text 'ALLAIN Thibaut' into text field 'Name'</msg>
+<status status="PASS" endtime="20170727 14:17:51.461" starttime="20170727 14:17:51.270"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>Email Address</arg>
+<arg>${mail}</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.462" level="INFO">Typing text 'thibaut.allain@orange.com' into text field 'Email Address'</msg>
+<status status="PASS" endtime="20170727 14:17:51.679" starttime="20170727 14:17:51.462"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>Subject</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.680" level="INFO">Typing text 'test Robot Framework' into text field 'Subject'</msg>
+<status status="PASS" endtime="20170727 14:17:51.862" starttime="20170727 14:17:51.679"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>message</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20170727 14:17:51.862" level="INFO">Typing text 'Ceci n'est pas un test.' into text field 'message'</msg>
+<status status="PASS" endtime="20170727 14:17:52.066" starttime="20170727 14:17:51.862"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>result.png</arg>
+</arguments>
+<msg timestamp="20170727 14:17:52.129" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="result.png"&gt;&lt;img src="result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170727 14:17:52.129" starttime="20170727 14:17:52.066"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:52.130" starttime="20170727 14:17:51.270"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:52.130" starttime="20170727 14:17:50.750"></status>
+</kw>
+<status status="PASS" endtime="20170727 14:17:52.130" critical="yes" starttime="20170727 14:17:47.297"></status>
+</test>
+<status status="PASS" endtime="20170727 14:17:52.131" starttime="20170727 14:17:47.202"></status>
+</suite>
+<status status="PASS" endtime="20170727 14:17:52.133" starttime="20170727 14:17:47.200"></status>
+</suite>
+<status status="PASS" endtime="20170727 14:17:52.135" starttime="20170727 14:17:47.178"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="1">Tests</stat>
+<stat fail="0" id="s1-s1" name="Suite web Docker" pass="1">Tests.Suite web Docker</stat>
+<stat fail="0" id="s1-s1-s1" name="Test web Docker2" pass="1">Tests.Suite web Docker.Test web Docker2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

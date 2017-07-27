@@ -1,0 +1,7 @@
+*** Variables ***
+${url}            http://84.39.33.161:8000
+${browser}        chrome
+${name}           ALLAIN Thibaut
+${mail}           thibaut.allain@orange.com
+${subject}        test Robot Framework
+${text}           Ceci n'est pas un test.
