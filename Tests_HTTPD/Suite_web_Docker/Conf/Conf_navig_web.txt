@@ -1,5 +1,6 @@
 *** Variables ***
-${url}            http://84.39.33.161:8000
+#${url}            http://84.39.33.161:8000
+${url}            https://10.236.240.28/api/v1/proxy/namespaces/apache/services/web:80/
 ${browser}        chrome
 ${name}           ALLAIN Thibaut
 ${mail}           thibaut.allain@orange.com

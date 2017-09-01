@@ -1,0 +1,27 @@
+version: "3"
+services:
+  wordpress:
+    image: wordpress:php7.1-apache
+    ports:
+      - 8019:80
+    networks:
+      - wpnet
+    depends_on:
+      - mariadb
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    environment:
+      WORDPRESS_DB_HOST: "mariadb"
+      WORDPRESS_DB_NAME: "wordpress"
+      WORDPRESS_DB_USER: "wordpress"
+      WORDPRESS_DB_PASSWORD: "changeme"
+networks:
+  wpnet:
+    driver: overlay
+#    attachable: true # not implemented
+#    # run instead: docker network create --driver overlay --attachable wpnet

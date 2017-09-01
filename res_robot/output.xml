@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170727 14:17:47.170" generator="Robot 3.0.2 (Python 2.7.13 on linux2)">
+<robot generated="20170731 14:13:49.191" generator="Robot 3.0.2 (Python 2.7.13 on linux2)">
 <suite source="/opt/robotframework/tests" id="s1" name="Tests">
 <suite source="/opt/robotframework/tests/Suite_web_Docker" id="s1-s1" name="Suite web Docker">
 <suite source="/opt/robotframework/tests/Suite_web_Docker/Test_web_Docker2.txt" id="s1-s1-s1" name="Test web Docker2">
@@ -12,8 +12,8 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20170727 14:17:47.299" level="INFO">Opening browser 'chrome' to base url 'http://84.39.33.161:8000'</msg>
-<status status="PASS" endtime="20170727 14:17:50.588" starttime="20170727 14:17:47.298"></status>
+<msg timestamp="20170731 14:13:49.322" level="INFO">Opening browser 'chrome' to base url 'http://84.39.33.161:8000'</msg>
+<status status="PASS" endtime="20170731 14:13:52.576" starttime="20170731 14:13:49.321"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
 <doc>Sets the `width` and `height` of the current window to the specified values.</doc>
@@ -21,11 +21,11 @@
 <arg>400</arg>
 <arg>700</arg>
 </arguments>
-<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:50.588"></status>
+<status status="PASS" endtime="20170731 14:13:52.756" starttime="20170731 14:13:52.577"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:47.298"></status>
+<status status="PASS" endtime="20170731 14:13:52.756" starttime="20170731 14:13:49.321"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:50.750" starttime="20170727 14:17:47.298"></status>
+<status status="PASS" endtime="20170731 14:13:52.756" starttime="20170731 14:13:49.321"></status>
 </kw>
 <kw name="Navigation" library="function_navig_web">
 <kw name="!Navigation" library="pageobject_navig_web">
@@ -34,62 +34,62 @@
 <arguments>
 <arg>mobile-navigation</arg>
 </arguments>
-<status status="PASS" endtime="20170727 14:17:50.794" starttime="20170727 14:17:50.751"></status>
+<status status="PASS" endtime="20170731 14:13:52.820" starttime="20170731 14:13:52.757"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=mobile-navigation</arg>
 </arguments>
-<msg timestamp="20170727 14:17:50.794" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
-<status status="PASS" endtime="20170727 14:17:50.866" starttime="20170727 14:17:50.794"></status>
+<msg timestamp="20170731 14:13:52.821" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
+<status status="PASS" endtime="20170731 14:13:52.907" starttime="20170731 14:13:52.821"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//a[@href='about.html']</arg>
 </arguments>
-<msg timestamp="20170727 14:17:50.866" level="INFO">Clicking element 'xpath=//a[@href='about.html']'.</msg>
-<status status="PASS" endtime="20170727 14:17:50.992" starttime="20170727 14:17:50.866"></status>
+<msg timestamp="20170731 14:13:52.907" level="INFO">Clicking element 'xpath=//a[@href='about.html']'.</msg>
+<status status="PASS" endtime="20170731 14:13:53.050" starttime="20170731 14:13:52.907"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Our website templates are created with inspiration</arg>
 </arguments>
-<status status="PASS" endtime="20170727 14:17:51.017" starttime="20170727 14:17:50.992"></status>
+<status status="PASS" endtime="20170731 14:13:53.088" starttime="20170731 14:13:53.050"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>mobile-navigation</arg>
 </arguments>
-<status status="PASS" endtime="20170727 14:17:51.047" starttime="20170727 14:17:51.017"></status>
+<status status="PASS" endtime="20170731 14:13:53.123" starttime="20170731 14:13:53.088"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=mobile-navigation</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.047" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
-<status status="PASS" endtime="20170727 14:17:51.112" starttime="20170727 14:17:51.047"></status>
+<msg timestamp="20170731 14:13:53.124" level="INFO">Clicking element 'id=mobile-navigation'.</msg>
+<status status="PASS" endtime="20170731 14:13:53.210" starttime="20170731 14:13:53.123"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//a[@href='contact.html']</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.113" level="INFO">Clicking element 'xpath=//a[@href='contact.html']'.</msg>
-<status status="PASS" endtime="20170727 14:17:51.241" starttime="20170727 14:17:51.112"></status>
+<msg timestamp="20170731 14:13:53.210" level="INFO">Clicking element 'xpath=//a[@href='contact.html']'.</msg>
+<status status="PASS" endtime="20170731 14:13:53.329" starttime="20170731 14:13:53.210"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>DO NOT HESITATE TO CONTACT US</arg>
 </arguments>
-<status status="PASS" endtime="20170727 14:17:51.269" starttime="20170727 14:17:51.241"></status>
+<status status="PASS" endtime="20170731 14:13:53.352" starttime="20170731 14:13:53.329"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:51.270" starttime="20170727 14:17:50.751"></status>
+<status status="PASS" endtime="20170731 14:13:53.353" starttime="20170731 14:13:52.757"></status>
 </kw>
 <kw name="!Informations contact" library="pageobject_navig_web">
 <kw name="Input Text" library="Selenium2Library">
@@ -98,8 +98,8 @@
 <arg>Name</arg>
 <arg>${name}</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.271" level="INFO">Typing text 'ALLAIN Thibaut' into text field 'Name'</msg>
-<status status="PASS" endtime="20170727 14:17:51.461" starttime="20170727 14:17:51.270"></status>
+<msg timestamp="20170731 14:13:53.354" level="INFO">Typing text 'ALLAIN Thibaut' into text field 'Name'</msg>
+<status status="PASS" endtime="20170731 14:13:53.544" starttime="20170731 14:13:53.353"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -107,8 +107,8 @@
 <arg>Email Address</arg>
 <arg>${mail}</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.462" level="INFO">Typing text 'thibaut.allain@orange.com' into text field 'Email Address'</msg>
-<status status="PASS" endtime="20170727 14:17:51.679" starttime="20170727 14:17:51.462"></status>
+<msg timestamp="20170731 14:13:53.545" level="INFO">Typing text 'thibaut.allain@orange.com' into text field 'Email Address'</msg>
+<status status="PASS" endtime="20170731 14:13:53.755" starttime="20170731 14:13:53.544"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -116,8 +116,8 @@
 <arg>Subject</arg>
 <arg>${subject}</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.680" level="INFO">Typing text 'test Robot Framework' into text field 'Subject'</msg>
-<status status="PASS" endtime="20170727 14:17:51.862" starttime="20170727 14:17:51.679"></status>
+<msg timestamp="20170731 14:13:53.756" level="INFO">Typing text 'test Robot Framework' into text field 'Subject'</msg>
+<status status="PASS" endtime="20170731 14:13:53.934" starttime="20170731 14:13:53.755"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -125,28 +125,28 @@
 <arg>message</arg>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20170727 14:17:51.862" level="INFO">Typing text 'Ceci n'est pas un test.' into text field 'message'</msg>
-<status status="PASS" endtime="20170727 14:17:52.066" starttime="20170727 14:17:51.862"></status>
+<msg timestamp="20170731 14:13:53.935" level="INFO">Typing text 'Ceci n'est pas un test.' into text field 'message'</msg>
+<status status="PASS" endtime="20170731 14:13:54.127" starttime="20170731 14:13:53.935"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
 <arguments>
 <arg>result.png</arg>
 </arguments>
-<msg timestamp="20170727 14:17:52.129" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="result.png"&gt;&lt;img src="result.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170727 14:17:52.129" starttime="20170727 14:17:52.066"></status>
+<msg timestamp="20170731 14:13:54.187" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="result.png"&gt;&lt;img src="result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170731 14:13:54.187" starttime="20170731 14:13:54.127"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:52.130" starttime="20170727 14:17:51.270"></status>
+<status status="PASS" endtime="20170731 14:13:54.187" starttime="20170731 14:13:53.353"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:52.130" starttime="20170727 14:17:50.750"></status>
+<status status="PASS" endtime="20170731 14:13:54.187" starttime="20170731 14:13:52.756"></status>
 </kw>
-<status status="PASS" endtime="20170727 14:17:52.130" critical="yes" starttime="20170727 14:17:47.297"></status>
+<status status="PASS" endtime="20170731 14:13:54.187" critical="yes" starttime="20170731 14:13:49.320"></status>
 </test>
-<status status="PASS" endtime="20170727 14:17:52.131" starttime="20170727 14:17:47.202"></status>
+<status status="PASS" endtime="20170731 14:13:54.189" starttime="20170731 14:13:49.225"></status>
 </suite>
-<status status="PASS" endtime="20170727 14:17:52.133" starttime="20170727 14:17:47.200"></status>
+<status status="PASS" endtime="20170731 14:13:54.191" starttime="20170731 14:13:49.223"></status>
 </suite>
-<status status="PASS" endtime="20170727 14:17:52.135" starttime="20170727 14:17:47.178"></status>
+<status status="PASS" endtime="20170731 14:13:54.192" starttime="20170731 14:13:49.201"></status>
 </suite>
 <statistics>
 <total>
