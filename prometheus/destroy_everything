@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ `docker ps | wc -l` -gt 1 ];
+then
+docker stop `docker ps -a -q` && docker rm `docker ps -a -q`
+
+if [ `docker ps| grep -v "CONTAINER ID" | wc -l` -lt 1 ];
+then
+echo "All containers have been destroyed."
+
+else 
+echo "Didn't work this time. Do it again !"
+fi
+
+else 
+echo "No container up."
+fi

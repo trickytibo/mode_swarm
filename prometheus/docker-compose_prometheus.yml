@@ -1,0 +1,112 @@
+version: '3'
+
+volumes:
+    prometheus_data: {}
+    grafana_data: {}
+
+networks:
+  monitoring:
+    driver: overlay
+  distributed:
+    external: true
+
+services:
+  prometheus:
+    image: prom/prometheus:v1.7.1
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '-config.file=/etc/prometheus/prometheus.yml'
+      - '-storage.local.path=/prometheus'
+      - '-alertmanager.url=http://alertmanager:9093'
+    ports:
+      - 9090:9090
+      #    links:
+      #      - cadvisor:cadvisor
+      #      - alertmanager:alertmanager
+    depends_on:
+      - cadvisor
+      - alertmanager
+    networks:
+      - monitoring
+      #- distributed
+
+  node-exporter:
+    image: basi/node-exporter:latest
+    networks:
+      - monitoring
+    ports: 
+      - 9100:9100
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+      - /etc/hostname:/etc/host_hostname
+    environment:
+      HOST_HOSTNAME: /etc/host_hostname
+    command: -collector.procfs "/host/proc" -collector.sysfs /host/sys -collector.textfile.directory /etc/node-exporter/ -collectors.enabled 'conntrack,diskstats,entropy,filefd,filesystem,loadavg,mdadm,meminfo,netdev,netstat,stat,textfile,time,vmstat,ipvs' -collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($$|/)"
+    deploy:
+      mode: global  
+
+  alertmanager:
+    image: prom/alertmanager
+    ports:
+      - 9093:9093
+    volumes: 
+      - ./alertmanager:/etc/alertmanager
+    networks:
+      - monitoring
+    command:
+      - '-config.file=/etc/alertmanager/config.yml'
+      - '-storage.path=/alertmanager'
+    
+  cadvisor:
+    image: google/cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /cgroup:/cgroup:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    deploy: 
+      mode: global
+    ports:
+      - 8080:8080
+    networks:
+      - monitoring
+  
+#  grafana:
+#    image: grafana/grafana
+#    depends_on:
+#      - prometheus
+#    ports:
+#      - 3000:3000
+#    volumes:
+#      - grafana_data:/var/lib/grafana
+#    env_file:
+#      - config.monitoring
+#    networks:
+#      - back-tier
+#      - front-tier
+#
+
+  grafana:
+    image: grafana:v4.2.0
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER: admin 
+      - GF_SECURITY_ADMIN_PASSWORD: foobar
+      - GF_PROMETHEUS_ENDPOINT: http://prometheus:9090
+      - JSON_DATA: ./dashboards
+      #- ELASTICSEARCH_ENDPOINT: ${ES_ADDRESS:-http://elasticsearch:9200}
+      #- ELASTICSEARCH_USER: ${ES_USERNAME}
+      #- ELASTICSEARCH_PASSWORD: ${ES_PASSWORD}
+    deploy:
+      mode: replicated
+      replicas: 1

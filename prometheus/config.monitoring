@@ -1,0 +1,7 @@
+GF_SECURITY_ADMIN_PASSWORD=foobar
+GF_USERS_ALLOW_SIGN_UP=false
+DS_NAME=prometheus
+DS_TYPE=prometheus
+DS_ACCESS=proxy
+DS_URL=http://prometheus:9090
+GF_JSON_DATA=./dashboards

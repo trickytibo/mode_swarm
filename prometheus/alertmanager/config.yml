@@ -1,0 +1,26 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname', 'cluster', 'service']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+  receiver: 'team-hipchat'
+
+  routes:
+  - receiver: 'prom_pageduty'
+
+#  - receiver: 'team-hipchat' 
+
+receivers:
+- name: 'team-hipchat'
+  hipchat_configs:
+  - room_id: '3743642'
+    auth_token: 'vpvmfERRxIFI1yktsqJ5QWinICgrvWqxvZGqD9q3'
+
+- name: 'prom_pageduty'
+  pagerduty_configs:
+  - service_key: '9a4efba70d6e4eff886cf00d0cb5fc23'
+
+#- name: 'default-receiver'
